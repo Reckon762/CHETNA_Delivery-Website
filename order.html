@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHETNA Snacks</title>
+    <link rel="stylesheet" href="css/order.css">
+</head>
+
+<body>
+    <div class="container">
+        <form id="myForm" action="https://api.web3forms.com/submit" method="POST">
+            <h3>Contact for delivery</h3>
+            <input type="hidden" name="access_key" value="0ec88ddc-2e01-44d6-9ad2-79c95612a734">
+            <input type="hidden" name="redirect" value="https://web3forms.com/success?title=Order%20placed%20successfully!&desc=We%20will%20contact%20you%20soon!" />
+            <input type="text" name="name" id="name" placeholder="Your Name" required>
+            <input type="text" name="phone" id="phone" placeholder="Phone No." required>
+            <input type="email" name="email" id="email" placeholder="Email" required>
+            <textarea name="order" id="order" rows="4" placeholder="Order what you like" required></textarea>
+            <textarea name="address" id="address" rows="4" placeholder="Delivery Address" required></textarea>
+            <button type="submit">Order</button>
+        </form>
+    </div>
+    <script>
+        window.onload = function () {
+            // Reset the form fields when the page loads
+            document.getElementById("myForm").reset();
+        };
+    </script>
+</body>
+
+</html>
